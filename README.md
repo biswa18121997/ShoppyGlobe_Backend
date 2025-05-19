@@ -1,6 +1,7 @@
 # ShoppyGlobe Backend
 
 A Node.js backend for an e-commerce platform, providing user authentication, product browsing, and cart management APIs. Built with Express, MongoDB, JWT, and bcrypt.
+You can find the front live hoisted  in React at this link : https://shoppyecomglobe.netlify.app/   (to be opened in incognito mode..for easy acces)
 
 ---
 
@@ -44,7 +45,7 @@ ShoppyGlobe_Backend/
 
 1. **Clone the repository:**
    ```sh
-   git clone <repo-url>
+   git clone https://github.com/biswa18121997/ShoppyGlobe_Backend.git
    cd ShoppyGlobe_Backend
    ```
 

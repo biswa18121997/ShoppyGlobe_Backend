@@ -3,7 +3,7 @@ import {ProductModel} from '../SchemaModels/productsSchema.js'
 import {CartModel} from '../SchemaModels/cartSchema.js'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt';
-import {SALT} from '../Controllers/userController.js'
+import {SALT} from '../Controllers/Controller.js'
 
 //To register a user..
 export async function registerUserChecker(req, res, next){
@@ -42,7 +42,6 @@ export async function authVerifyChecker(req, res, next ){
         }
         req.email = decoded.email ;
         //after each request verification check if user is logged in or not..
-        console.log("verification complerte..current useremail : ->",req.email);
         next();
     })
 }
@@ -144,7 +143,6 @@ export async function deleteCartChecker(req, res, next){
                 next();
             }
         }
-
     }catch(err){
         console.log("internal server error " ,err)
     }

@@ -7,6 +7,21 @@ import bcrypt from 'bcrypt'
 //adding salt for bcrypt..
 export const SALT = 8;
 
+//controller for home routes
+export function Home(req, res){
+     return res.status(201).send(
+         `
+        <h2>Available API Endpoints</h2>
+        <ul>
+            <li><strong>GET /products</strong>: Fetch a list of products from MongoDB.</li>
+            <li><strong>GET /products/:id</strong>: Fetch details of a single product by its ID.</li>
+            <li><strong>POST /cart/:id</strong>: Add a product to the shopping cart.</li>
+            <li><strong>PUT /cart/:id</strong>: Update the quantity of a product in the cart.</li>
+            <li><strong>DELETE /cart/:id</strong>: Remove a product from the cart.</li>
+        </ul>`
+     )
+}
+
 //controller to register a user..
 export async function registerUser(req, res){
     try{

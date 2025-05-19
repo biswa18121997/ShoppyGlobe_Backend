@@ -1,9 +1,9 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import {Connect} from './Utils/Connect.js'
-import {userRoutes} from './Routes/userRoutes.js'
+import {userRoutes} from './Routes/Routes.js'
 
-
+//instance of express application
 const app = express();
 app.use(express.json());
 app.use((req,res,next)=>{

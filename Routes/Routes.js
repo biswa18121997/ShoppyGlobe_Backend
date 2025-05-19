@@ -1,10 +1,11 @@
-import {registerUserChecker, loginUserChecker,authTokenizerChecker,authVerifyChecker, getProductsChecker, getProductChecker, postCartChecker, putCartChecker, deleteCartChecker } from '../Middlewares/userMiddlewares.js'
-import {registerUser, loginUser, getProducts, getProduct, postCart, putCart, deleteCart} from '../Controllers/userController.js'
+import {registerUserChecker, loginUserChecker,authTokenizerChecker,authVerifyChecker, getProductsChecker, getProductChecker, postCartChecker, putCartChecker, deleteCartChecker } from '../Middlewares/Middleware.js'
+import {registerUser, loginUser, getProducts, getProduct, postCart, putCart, deleteCart, Home} from '../Controllers/Controller.js'
 
 
 export function userRoutes(app){
 
 
+    app.get('/', Home)
 
     app.post('/register', registerUserChecker, registerUser );
     app.post('/login', loginUserChecker,authTokenizerChecker,authVerifyChecker, loginUser);
